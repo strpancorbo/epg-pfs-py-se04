@@ -188,6 +188,7 @@ def ej18():
 
     operadores = ('+', '-', '+', '/', '^', '%')
 
+    qresultado = "nulo"
     if qsigno in operadores:
         qresultado = eval(str(op1) + str(qsigno) + str(op2))
 
