@@ -1,5 +1,6 @@
 import math
-from tkinter.messagebox import *
+from tkinter import Tk
+from tkinter import messagebox
 
 
 def ej1():
@@ -201,8 +202,9 @@ def ej18():
         qresultado = op1 % op2
 
     print("El resultado es: " + str(qresultado))
-    print(showinfo("showinfo", "Information"))
-    # messagebox.showinfo(message="El resultado es: " + str(qresultado), title = "CalculadoraInversa")
+    root = Tk()
+    root.withdraw()
+    messagebox.showinfo(message="El resultado es: " + str(qresultado), title = "CalculadoraInversa")
     # messagebo18x.Message(message="El resultado es: " + str(qresultado), title = "CalculadoraInversa")
     # messagebox.Message(master=None)
 
