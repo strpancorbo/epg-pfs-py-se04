@@ -186,27 +186,16 @@ def ej18():
     op2 = int(input("Introduzca el segundo operando: "))
     qsigno = str(input("Introduzca un signo aritmético: "))
 
-    qresultado = 0
+    operadores = ('+', '-', '+', '/', '^', '%')
 
-    if str(qsigno) == "+":
-        qresultado = op1 + op2
-    if qsigno == "-":
-        qresultado = op1 - op2
-    if qsigno == "*":
-        qresultado = op1 * op2
-    if qsigno == "/":
-        qresultado = op1 / op2
-    if qsigno == "^":
-        qresultado = math.pow(op1, op2)
-    if qsigno == "%":
-        qresultado = op1 % op2
+    if qsigno in operadores:
+        qresultado = eval(str(op1) + str(qsigno) + str(op2))
+
 
     print("El resultado es: " + str(qresultado))
     root = Tk()
     root.withdraw()
     messagebox.showinfo(message="El resultado es: " + str(qresultado), title = "CalculadoraInversa")
-    # messagebo18x.Message(message="El resultado es: " + str(qresultado), title = "CalculadoraInversa")
-    # messagebox.Message(master=None)
 
 def menu_principal():
     ejercicio = 0
